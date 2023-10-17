@@ -432,6 +432,21 @@ str_detect(string_vec, &quot;\\[[0-9]&quot;)</code></pre>
 </div>
 <div id="factors" class="section level2">
 <h2>Factors</h2>
+<pre class="r"><code>vec_sex = factor(c(&quot;male&quot;, &quot;male&quot;, &quot;female&quot;, &quot;female&quot;))
+vec_sex</code></pre>
+<pre><code>## [1] male   male   female female
+## Levels: female male</code></pre>
+<pre class="r"><code>as.numeric(vec_sex)</code></pre>
+<pre><code>## [1] 2 2 1 1</code></pre>
+<pre class="r"><code>vec_sex = fct_relevel(vec_sex, &quot;male&quot;)
+vec_sex</code></pre>
+<pre><code>## [1] male   male   female female
+## Levels: male female</code></pre>
+<pre class="r"><code>as.numeric(vec_sex)</code></pre>
+<pre><code>## [1] 1 1 2 2</code></pre>
+</div>
+<div id="nsduh" class="section level2">
+<h2>NSDUH</h2>
 </div>
 
 
